@@ -10,7 +10,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['name','description','price','created_by']
 
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,6 +18,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class StockSerializer(serializers.ModelSerializer):
+    product = serializers.StringRelatedField(read_only=True)
     class Meta:
         model = Stock
         fields = ['product','quantity']
