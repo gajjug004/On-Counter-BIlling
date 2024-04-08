@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-qul-q#o1lh6-bpt-g!-t^f+-f%*st(2ku=yw-^wr3cag4k-8k5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://on-counter-billing.onrender.com']
 
 
 # Application definition
